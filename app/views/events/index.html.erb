@@ -1,6 +1,15 @@
 <h1>Available events</h1>
+<hr>
+<h4>Upcoming Events:</h4>
 <ul>
-  <% @events.each do |event| %>
+  <% @events.upcoming do |event| %>
+    <%= link_to event.name, event_path(event) %>
+  <% end %>
+</ul>
+<hr>
+<h4>Past Events:</h4>
+<ul>
+  <% @events.past do |event| %>
     <%= link_to event.name, event_path(event) %>
   <% end %>
 </ul>

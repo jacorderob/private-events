@@ -11,6 +11,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="container">
+      <div id="user_nav">
+        <% if current_user %>
+          Signed in as <%= current_user.name %>
+        <% else %>
+          <%= link_to "Sign in", "/login" %>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,5 @@
+<%= form_with url:"/signin" do |f| %>
+  <%= f.label :name, "Enter user's name" %>
+  <%= f.text_field :name %>
+  <%= f.submit "Sign in" %>
+<% end %>
